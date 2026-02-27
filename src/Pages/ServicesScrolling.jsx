@@ -192,6 +192,8 @@ const ServicesScrolling = () => {
           z-index: 10;
         }
       `}</style>
+
+    
     </div>
   );
 };

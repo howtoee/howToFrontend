@@ -4,6 +4,7 @@ import OurTravel from "../Pages/OurTravel";
 import InnovationSection from "../Pages/InnovationSection";
 import ServicesScrolling from "../Pages/ServicesScrolling";
 import Whychoose from "../Pages/Whychoose";
+import SafariImage from "../Pages/SafariImage";
 
 const Home = () => {
   return (
@@ -23,10 +24,11 @@ const Home = () => {
 
       {/* Achievements */}
       <OurAchivenments />
-      <Whychoose />
+    
       <OurTravel />
       <InnovationSection />
       <ServicesScrolling />
+      <SafariImage/>
     </div>
   );
 };
