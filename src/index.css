@@ -1,0 +1,46 @@
+/* src/index.css */
+
+@import "tailwindcss";
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -webkit-transform: translateZ(0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradient {
+  background-size: 300% 300%;
+  animation: gradient 12s ease infinite;
+}
+
+.info-card {
+  @apply bg-white/80 backdrop-blur-xl rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300;
+}
+
+.info-title {
+  @apply text-xl font-semibold mb-3 text-indigo-700;
+}
+
+.nav-link {
+  @apply flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-black transition;
+}
+
+.dropdown {
+  @apply absolute top-full left-0 mt-3 w-56 rounded-2xl bg-white shadow-xl border p-2 space-y-1;
+}
+
+.dropdown-item {
+  @apply flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 cursor-pointer text-sm;
+}
+
+.mobile-link {
+  @apply block rounded-lg px-3 py-2 hover:bg-gray-100;
+}
