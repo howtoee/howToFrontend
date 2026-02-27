@@ -5,6 +5,7 @@ import InnovationSection from "../Pages/InnovationSection";
 import ServicesScrolling from "../Pages/ServicesScrolling";
 import Whychoose from "../Pages/Whychoose";
 import SafariImage from "../Pages/SafariImage";
+import FlipTestimonials from "../Pages/FlipTestimonials";
 
 const Home = () => {
   return (
@@ -29,6 +30,7 @@ const Home = () => {
       <InnovationSection />
       <ServicesScrolling />
       <SafariImage/>
+      <FlipTestimonials/>
     </div>
   );
 };
