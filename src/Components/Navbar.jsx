@@ -184,46 +184,67 @@ const Navbar = () => {
     window.addEventListener("resize", updateCapsule);
     return () => window.removeEventListener("resize", updateCapsule);
   }, [location.pathname, hoveredIndex]);
-const hasInitializedTranslate = useRef(false);
+  const hasInitializedTranslate = useRef(false);
+
   // Google Translate Init
-useEffect(() => {
-  const initGoogleTranslate = () => {
-    if (
-      window.google &&
-      window.google.translate &&
-      !hasInitializedTranslate.current &&
-      !document.querySelector(".goog-te-gadget")
-    ) {
-      hasInitializedTranslate.current = true;
+  useEffect(() => {
+    const initGoogleTranslate = () => {
+      // Clear out duplicates if React Strict Mode caused multiple injections
+      const containers = document.querySelectorAll("#google_translate_element > div");
+      if (containers.length > 1) {
+        for (let i = 1; i < containers.length; i++) {
+          containers[i].remove();
+        }
+      }
 
-      new window.google.translate.TranslateElement(
-        { pageLanguage: "en", autoDisplay: false },
-        "google_translate_element"
-      );
+      if (
+        window.google &&
+        window.google.translate &&
+        !hasInitializedTranslate.current
+      ) {
+        hasInitializedTranslate.current = true;
+
+        // Ensure it's empty before creating to prevent doubles
+        const element = document.getElementById("google_translate_element");
+        if (element) {
+          element.innerHTML = '';
+
+          new window.google.translate.TranslateElement(
+            { pageLanguage: "en", autoDisplay: false },
+            "google_translate_element"
+          );
+        }
+      }
+    };
+
+    window.googleTranslateElementInit = initGoogleTranslate;
+
+    // Check if script already exists to prevent duplicate injections on hot-reloads
+    const existingScript = document.getElementById("google-translate-script");
+    if (!existingScript) {
+      const script = document.createElement("script");
+      script.id = "google-translate-script";
+      script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.async = true;
+      document.body.appendChild(script);
+    } else if (window.google && window.google.translate) {
+      // If script exists and is loaded, manually trigger init (handles hot reloads)
+      initGoogleTranslate();
     }
-  };
 
-  window.googleTranslateElementInit = initGoogleTranslate;
-
-  if (!document.getElementById("google-translate-script")) {
-    const script = document.createElement("script");
-    script.id = "google-translate-script";
-    script.src =
-      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    script.async = true;
-    document.body.appendChild(script);
-  } else {
-    initGoogleTranslate();
-  }
-}, []);
+    // Cleanup function to prevent double injection memory leaks in dev mode
+    return () => {
+      hasInitializedTranslate.current = false;
+    };
+  }, []);
 
   return (
     <>
       <style>{customStyles}</style>
       <nav
         className={`sticky top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-            ? "bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] border-b border-white/20 py-3"
-            : "bg-transparent py-4"
+          ? "bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] border-b border-white/20 py-3"
+          : "bg-transparent py-4"
           }`}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-5 md:px-6 lg:px-8">
@@ -413,12 +434,12 @@ useEffect(() => {
             </div>
 
             {/* Actions/Translate/Mobile Menu - Column 3 */}
-            <div className="flex-1 flex justify-end items-center gap-4">
-              {/* Google Translate - Desktop Only */}
-              <div className="hidden lg:flex items-center">
+            <div className="flex-1 flex justify-end items-center gap-2 sm:gap-4">
+              {/* Google Translate - Globally Visible */}
+              <div className="flex items-center">
                 <div
                   id="google_translate_element"
-                  className="google-translate-container scale-90 origin-right pr-2"
+                  className="google-translate-container scale-75 sm:scale-90 origin-right transition-transform"
                 ></div>
               </div>
 
@@ -467,8 +488,8 @@ useEffect(() => {
                         <button
                           onClick={() => setIsServicesOpen(!isServicesOpen)}
                           className={`flex items-center justify-between w-full px-4 py-3 rounded-2xl text-base font-bold transition-all ${isServicesOpen
-                              ? "bg-[#222467]/10 text-[#222467] dark:bg-[#428bca]/20 dark:text-[#428bca]"
-                              : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+                            ? "bg-[#222467]/10 text-[#222467] dark:bg-[#428bca]/20 dark:text-[#428bca]"
+                            : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
                             }`}
                         >
                           <div className="flex items-center gap-3">
@@ -575,25 +596,7 @@ useEffect(() => {
                   </div>
                 ))}
 
-                {/* Google Translate in Mobile Menu */}
-                <div className="pt-4 border-t border-slate-200 dark:border-slate-800">
-                  <p className="px-4 py-2 text-xs font-bold text-slate-400 uppercase tracking-widest">
-                    Language
-                  </p>
-                  <div className="px-4 py-2">
-                    <div
-                      id="google_translate_mobile_placeholder"
-                      className="google-translate-container"
-                    >
-                      {/* Note: Google Translate usually only supports one widget per page. 
-                          On mobile, we can either re-mount or rely on the desktop one if it's visible.
-                          For consistency, it's often better to just have it once. */}
-                      <div className="text-xs text-slate-500 italic">
-                        Select language from top menu
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {/* Google Translate removed from here as it now displays globally in the top bar */}
               </div>
             </motion.div>
           )}

@@ -33,8 +33,8 @@ const App = () => {
       {loading && <Loader />}
 
       <ScrollToTop />
-      <div className={`${loading ? "pointer-events-none" : ""}`}>
-        <div className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+      <div className={`${loading ? "pointer-events-none" : ""} overflow-x-hidden w-full`}>
+        <div className="min-h-screen w-full bg-slate-50 dark:bg-slate-900 transition-colors duration-300 overflow-x-hidden">
           <Navbar />
 
           <AnimatePresence mode="wait">
@@ -70,11 +70,12 @@ const App = () => {
             </motion.main>
           </AnimatePresence>
 
-          <QuickLinks />
-
           <Footer />
         </div>
       </div>
+
+      {/* QuickLinks moved completely outside of layout wrappers to guarantee "fixed" positioning isn't affected by any parent transforms */}
+      <QuickLinks />
     </>
   );
 };

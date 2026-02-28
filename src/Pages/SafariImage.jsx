@@ -2,8 +2,17 @@ import React from "react";
 
 const SafariImage = () => {
   return (
-    <div className="w-screen h-screen overflow-hidden">
-      <div className="relative w-full h-full group">
+    <div className="w-screen overflow-hidden">
+      <div
+        className="
+          relative w-full group
+          h-[45vh]
+          sm:h-[55vh]
+          md:h-[60vh]
+          lg:h-[70vh]
+          xl:h-[80vh]
+        "
+      >
         <img
           src="/Images/Safari.jpg"
           alt="Wildlife Safari"
@@ -27,10 +36,11 @@ const SafariImage = () => {
             className="
               text-white font-bold tracking-wider
               animate-fadeInUp
-              text-2xl
-              sm:text-3xl
-              md:text-4xl
-              lg:text-5xl
+              text-xl
+              sm:text-2xl
+              md:text-3xl
+              lg:text-4xl
+              xl:text-5xl
             "
           >
             Wildlife Safari

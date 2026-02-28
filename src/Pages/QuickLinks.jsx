@@ -1,7 +1,5 @@
-import { Phone, Briefcase, Info, Mail } from "lucide-react";
-import { useState, useEffect } from "react";
+import { Phone, HelpCircle, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
   {
@@ -12,128 +10,80 @@ const links = [
       </svg>
     ),
     label: "WhatsApp",
-    link: "https://wa.me/919876543210",
+    link: "https://wa.me/919014263831",
+    color: "bg-green-500",
   },
   {
     id: "mobile",
     icon: Phone,
     label: "Call Us",
-    path: "tel:+919876543210",
+    path: "tel:+919014263831",
+    color: "bg-blue-600",
   },
   {
-    id: "services",
-    icon: Briefcase,
-    label: "Services",
-    link: "/services",
-  },
-  {
-    id: "about",
-    icon: Info,
-    label: "About Us",
-    link: "/about",
+    id: "faq",
+    icon: HelpCircle,
+    label: "FAQ",
+    link: "/faq",
+    color: "bg-purple-600",
   },
   {
     id: "contact",
     icon: Mail,
     label: "Contact",
     link: "/contact",
+    color: "bg-indigo-600",
   },
 ];
 
 const QuickLinks = () => {
-  const [hoveredId, setHoveredId] = useState(null);
-
-
-
   return (
-    <>
-      <style>{`
-        @keyframes pulseShadow {
-          0%, 100% {
-            box-shadow: 0 0 0 0 #428bc9;
-          }
-          50% {
-            box-shadow: 0 0 20px 6px #428bc9;
-          }
+    <div className="fixed right-0 top-1/2 -translate-y-1/2 z-[9999] flex flex-col items-end space-y-3 md:space-y-4 pointer-events-none">
+      {links.map((link) => {
+        const href = link.path || link.link;
+        const Icon = link.icon;
+        const isExternal = link.id === "whatsapp" || link.id === "mobile";
+
+        const content = (
+          <div className="group flex justify-end">
+            {/* 
+              This is the pill container. It is perfectly aligned to the right edge.
+              When hovered, the width increases. Because it's justify-end from the parent, 
+              it expands to the LEFT. 
+              The icon pushes to the left, and the text is revealed behind it!
+            */}
+            <div className="flex items-center w-12 md:w-14 group-hover:w-36 md:group-hover:w-40 transition-all duration-300 ease-out shadow-[-3px_3px_12px_rgba(0,0,0,0.15)] rounded-l-full overflow-hidden bg-white">
+
+              {/* ICON (LEFT SIDE) */}
+              <div className={`h-12 w-12 md:h-14 md:w-14 shrink-0 flex items-center justify-center text-white ${link.color} transition-colors rounded-l-full`}>
+                <Icon className="h-5 w-5 md:h-6 md:w-6" />
+              </div>
+
+              {/* NAME (RIGHT SIDE) */}
+              <div className="text-gray-800 font-extrabold text-xs md:text-sm pl-3 whitespace-nowrap">
+                {link.label}
+              </div>
+
+            </div>
+          </div>
+        );
+
+        // pointer-events-auto restores clicking because the parent is pointer-events-none (so you can click 'through' the blank space)
+        if (isExternal) {
+          return (
+            <a key={link.id} href={href} target={link.id === "whatsapp" ? "_blank" : "_self"} rel="noopener noreferrer" className="outline-none block pointer-events-auto">
+              {content}
+            </a>
+          );
         }
 
-        .animate-pulseShadow {
-          animation: pulseShadow 2s ease-in-out infinite;
-        }
-
-        .transition-custom {
-          transition: all 0.8s ease-in-out;
-        }
-      `}</style>
-      <AnimatePresence>
-       
-     <motion.div
-drag
-dragMomentum={false}
-  dragElastic={0.2}
-            className="fixed top-110 right-4 z-[100] flex flex-col space-y-2"
-          >
-            {links.map((link) => {
-              const isActive = hoveredId === link.id;
-              const href = link.path || link.link;
-              const Icon = link.icon;
-              const isExternal = link.id === "whatsapp" || link.id === "mobile";
-
-              const content = (
-                <>
-                  <div
-                    className={`bg-[#222467] text-white p-3 flex items-center justify-center rounded-l-full group-hover:bg-blue-600 transition-colors duration-300 ${
-                      link.id === "whatsapp" ? "animate-pulseShadow" : ""
-                    }`}
-                  >
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <motion.span
-                    initial={{ width: 0, opacity: 0 }}
-                    animate={{
-                      width: isActive ? "auto" : 0,
-                      opacity: isActive ? 1 : 0,
-                    }}
-                    className="overflow-hidden whitespace-nowrap bg-white text-gray-800 font-bold text-sm px-0 group-hover:px-4 h-full flex items-center shadow-lg rounded-l-md border-y border-l border-slate-200"
-                  >
-                    {link.label}
-                  </motion.span>
-                </>
-              );
-
-              const commonProps = {
-                key: link.id,
-                onMouseEnter: () => setHoveredId(link.id),
-                onMouseLeave: () => setHoveredId(null),
-                className: `flex flex-row-reverse items-center group cursor-pointer transition-all duration-300 ${
-                  isActive ? "translate-x-0" : "translate-x-[calc(0%)]"
-                }`,
-                style: { zIndex: isActive ? 50 : 10 },
-              };
-
-              if (isExternal) {
-                return (
-                  <a
-                    {...commonProps}
-                    href={href}
-                    target={link.id === "whatsapp" ? "_blank" : "_self"}
-                    rel="noopener noreferrer"
-                  >
-                    {content}
-                  </a>
-                );
-              }
-
-              return (
-                <Link {...commonProps} to={href}>
-                  {content}
-                </Link>
-              );
-            })}
-          </motion.div>
-        
-      </AnimatePresence>
-    </>
+        return (
+          <Link key={link.id} to={href} className="outline-none block pointer-events-auto">
+            {content}
+          </Link>
+        );
+      })}
+    </div>
   );
 };
 

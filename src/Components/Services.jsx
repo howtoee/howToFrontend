@@ -12,13 +12,13 @@ import {
   CameraIcon,              // trips
   SparklesIcon,            // packages
 } from "@heroicons/react/24/outline";
-
+import { useNavigate } from "react-router-dom";
 const services = [
   {
     title: "Flight Bookings",
     desc: "Secure the cheapest domestic and international flights with HowTo Travel. We compare real-time prices across airlines to offer unbeatable last-minute and advance deals. Easy online booking, flexible changes, and 24/7 support make your air travel simple, affordable, and stress-free, no hidden fees, just the lowest rates guaranteed.",
     icon: PaperAirplaneIcon,
-    image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1",
+    image: "/ServicesImages/FlightBooking.jpg",
   },
   {
     title: "Hotel Bookings",
@@ -30,7 +30,7 @@ const services = [
     title: "Visa Appointments",
     desc: "Get hassle-free visa assistance with us. We guide you through applications, document requirements, and appointment scheduling for popular destinations. Fast, accurate support ensures smooth processing and higher approval chances. Travel worry-free with expert help at the most affordable service rates available.",
     icon: IdentificationIcon,
-    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c",
+    image: "/ServicesImages/img11.jpg",
   },
   {
     title: "Travel Insurance",
@@ -48,19 +48,19 @@ const services = [
     title: "Train Bookings",
     desc: "Reserve IRCTC and other train tickets effortlessly through HowTo Travel. Get the lowest confirmed fares, tatkal options, and seat availability checks. Fast booking, e-tickets, and helpful support for groups or last-minute plans. Enjoy smooth, cost-effective rail journeys without the usual hassle.",
     icon: ArrowPathRoundedSquareIcon,
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+    image:  "/ServicesImages/TrainBooking.jpg",
   },
   {
     title: "Airport Transfers",
     desc: "Arrive stress-free with reliable, low-cost airport transfers from HowTo Travel. Private cars, shuttles, or luxury options to/from any airport. Book in advance or last-minute at unbeatable prices with a meet-and-greet service. Safe, punctual rides ensure a smooth start or end to your trip.",
     icon: MapPinIcon,
-    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957",
+    image: "/ServicesImages/AirportTransfers.jpg",
   },
   {
     title: "Local Transfers",
     desc: "Explore cities comfortably with affordable local transfers booked through HowTo Travel. From city rides to day trips, choose taxis, private cars, or shuttles at the cheapest rates. Easy booking, professional drivers, and on-time service, making local travel convenient, safe, and budget-friendly wherever you go..",
     icon: GlobeAsiaAustraliaIcon,
-    image: "https://images.unsplash.com/photo-1518684079-3c830dcef090",
+    image: "/ServicesImages/LocalTransfer.jpg",
   },
   {
     title: "Safari Trips",
@@ -72,12 +72,13 @@ const services = [
     title: "Tour Packages",
     desc: "We offer curated tour packages at for group, family, or couple trips. All-inclusive deals cover flights, hotels, transfers, sightseeing, and more at the lowest prices. Personalised options, seamless coordination, and stress-free planning turn your dream vacation into reality affordably and effortlessly.",
     icon: SparklesIcon,
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    image: "/ServicesImages/Tourpackages.jpg",
   },
 ];
 
 
 const Services = () => {
+  const navigate = useNavigate();
   return (
     <div className="pt-[0px] sm:pt-0 md:pt-[2px] lg:pt-2">
       <section className="relative overflow-hidden bg-gray-950 text-white">
@@ -157,10 +158,12 @@ const Services = () => {
                       {service.desc}
                     </p>
 
-                    <button className="mt-4 sm:mt-6 inline-flex items-center gap-2 rounded-full bg-sky-500/90 px-4 sm:px-6 py-2 text-xs sm:text-sm font-semibold text-white hover:bg-sky-400 transition-all">
-                      Explore Service
-                    </button>
-
+                 <button
+  onClick={() => navigate("/contact")}
+  className="mt-4 sm:mt-6 inline-flex items-center gap-2 rounded-full bg-sky-500/90 px-4 sm:px-6 py-2 text-xs sm:text-sm font-semibold text-white hover:bg-sky-400 transition-all cursor-pointer"
+>
+  Explore Service
+</button>
                     <div className="absolute -inset-[1px] -z-10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-sky-500/40 via-indigo-500/40 to-pink-500/40 blur-xl" />
                   </motion.div>
                 </motion.div>
