@@ -18,7 +18,7 @@ const services = [
     title: "Flight Bookings",
     desc: "Secure the cheapest domestic and international flights with HowTo Travel. We compare real-time prices across airlines to offer unbeatable last-minute and advance deals. Easy online booking, flexible changes, and 24/7 support make your air travel simple, affordable, and stress-free, no hidden fees, just the lowest rates guaranteed.",
     icon: PaperAirplaneIcon,
-    image: "/ServicesImages/FlightBooking.jpg",
+    image: "/ServicesImages/FlightBooking.png",
   },
   {
     title: "Hotel Bookings",
@@ -30,7 +30,7 @@ const services = [
     title: "Visa Appointments",
     desc: "Get hassle-free visa assistance with us. We guide you through applications, document requirements, and appointment scheduling for popular destinations. Fast, accurate support ensures smooth processing and higher approval chances. Travel worry-free with expert help at the most affordable service rates available.",
     icon: IdentificationIcon,
-    image: "/ServicesImages/img11.jpg",
+    image: "/ServicesImages/Visa.png",
   },
   {
     title: "Travel Insurance",
@@ -42,25 +42,25 @@ const services = [
     title: "Bus Bookings",
     desc: "Book comfortable, budget-friendly bus tickets across India with us. Select AC, sleeper, and luxury options with the cheapest fares and real-time availability. Simple booking process, secure payments, and timely rides, making intercity travel easy, affordable, and reliable every time.",
     icon: TruckIcon,
-    image: "https://images.unsplash.com/photo-1509749837427-ac94a2553d0e",
+    image: "/ServicesImages/BusBooking.png",
   },
   {
     title: "Train Bookings",
     desc: "Reserve IRCTC and other train tickets effortlessly through HowTo Travel. Get the lowest confirmed fares, tatkal options, and seat availability checks. Fast booking, e-tickets, and helpful support for groups or last-minute plans. Enjoy smooth, cost-effective rail journeys without the usual hassle.",
     icon: ArrowPathRoundedSquareIcon,
-    image:  "/ServicesImages/TrainBooking.jpg",
+    image:  "/ServicesImages/TrainBooking.png",
   },
   {
     title: "Airport Transfers",
     desc: "Arrive stress-free with reliable, low-cost airport transfers from HowTo Travel. Private cars, shuttles, or luxury options to/from any airport. Book in advance or last-minute at unbeatable prices with a meet-and-greet service. Safe, punctual rides ensure a smooth start or end to your trip.",
     icon: MapPinIcon,
-    image: "/ServicesImages/AirportTransfers.jpg",
+    image: "/ServicesImages/AirportTransfer.png",
   },
   {
     title: "Local Transfers",
     desc: "Explore cities comfortably with affordable local transfers booked through HowTo Travel. From city rides to day trips, choose taxis, private cars, or shuttles at the cheapest rates. Easy booking, professional drivers, and on-time service, making local travel convenient, safe, and budget-friendly wherever you go..",
     icon: GlobeAsiaAustraliaIcon,
-    image: "/ServicesImages/LocalTransfer.jpg",
+    image: "/ServicesImages/LocalTransfer.png",
   },
   {
     title: "Safari Trips",

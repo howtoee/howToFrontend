@@ -21,12 +21,12 @@ const services = [
     {
         title: "Travel insurance",
         description: "Protect your journey with affordable and comprehensive travel insurance at HowTo Travel. Coverage includes medical emergencies, trip cancellations, lost baggage, and delays. Quick online purchase, instant policy, and reliable claims support. Travel confidently knowing you're covered at the lowest premiums.",
-        image: "/ServicesImages/img4.png",
+        image: "/ServicesImages/img5.png",
     },
     {
         title: "Bus bookings",
         description: "Book comfortable, budget-friendly bus tickets across India with us. Select AC, sleeper, and luxury options with the cheapest fares and real-time availability. Simple booking process, secure payments, and timely rides, making intercity travel easy, affordable, and reliable every time.",
-        image: "/ServicesImages/img5.png",
+        image: "/ServicesImages/img7.png",
     },
     {
         title: "Train bookings",
@@ -36,12 +36,12 @@ const services = [
     {
         title: "Airport transfers",
         description: "Arrive stress-free with reliable, low-cost airport transfers from HowTo Travel. Private cars, shuttles, or luxury options to/from any airport. Book in advance or last-minute at unbeatable prices with a meet-and-greet service. Safe, punctual rides ensure a smooth start or end to your trip.",
-        image: "/ServicesImages/img8.png",
+        image: "/ServicesImages/AirportTransfer.png",
     },
     {
         title: "Local transfers",
         description: "Explore cities comfortably with affordable local transfers booked through HowTo Travel. From city rides to day trips, choose taxis, private cars, or shuttles at the cheapest rates. Easy booking, professional drivers, and on-time service, making local travel convenient, safe, and budget-friendly wherever you go.",
-        image: "/ServicesImages/img7.png",
+        image: "/ServicesImages/LocalTransfer.png",
     },
     {
         title: "Safari trips",

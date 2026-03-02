@@ -14,7 +14,7 @@ const SafariImage = () => {
         "
       >
         <img
-          src="/Images/Safari.jpg"
+          src="/Images/Wild.png"
           alt="Wildlife Safari"
           className="
             w-full h-full object-cover

@@ -20,7 +20,7 @@ const AboutUs = () => {
       <div className="relative w-full h-[30vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] overflow-hidden rounded-b-2xl sm:rounded-b-[2rem] lg:rounded-b-[3rem]">
         {/* Background Image */}
         <img
-          src="/Images/AboutUs.jpg"
+          src="/Images/AboutUs.png"
           alt="About Us"
           className="absolute inset-0 w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700"
         />
@@ -29,7 +29,7 @@ const AboutUs = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-700 via-blue-800 to-blue-600 opacity-30 mix-blend-overlay animate-pulse-slow" />
 
         {/* Soft Dark Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        {/* <div className="absolute inset-0 bg-black/40" /> */}
 
         {/* Hero Text */}
         <div className="absolute inset-0 flex items-center justify-center">
