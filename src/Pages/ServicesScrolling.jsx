@@ -6,7 +6,7 @@ const services = [
     {
         title: "Flight bookings",
         description: "Secure the cheapest domestic and international flights with HowTo Travel. We compare real-time prices across airlines to offer unbeatable last-minute and advance deals. Easy online booking, flexible changes, and 24/7 support make your air travel simple, affordable, and stress-free, no hidden fees, just the lowest rates guaranteed.",
-        image: "/ServicesImages/img1.png"  // Path from public directory
+        image: "/ServicesImages/img8.png"  // Path from public directory
     },
     {
         title: "Hotel bookings",
@@ -31,27 +31,27 @@ const services = [
     {
         title: "Train bookings",
         description: "Reserve IRCTC and other train tickets effortlessly through HowTo Travel. Get the lowest confirmed fares, tatkal options, and seat availability checks. Fast booking, e-tickets, and helpful support for groups or last-minute plans. Enjoy smooth, cost-effective rail journeys without the usual hassle.",
-        image: "/ServicesImages/img6.png",
+        image: "/ServicesImages/img9.png",
     },
     {
         title: "Airport transfers",
         description: "Arrive stress-free with reliable, low-cost airport transfers from HowTo Travel. Private cars, shuttles, or luxury options to/from any airport. Book in advance or last-minute at unbeatable prices with a meet-and-greet service. Safe, punctual rides ensure a smooth start or end to your trip.",
-        image: "/ServicesImages/img7.png",
+        image: "/ServicesImages/img8.png",
     },
     {
         title: "Local transfers",
         description: "Explore cities comfortably with affordable local transfers booked through HowTo Travel. From city rides to day trips, choose taxis, private cars, or shuttles at the cheapest rates. Easy booking, professional drivers, and on-time service, making local travel convenient, safe, and budget-friendly wherever you go.",
-        image: "/ServicesImages/img8.png",
+        image: "/ServicesImages/img7.png",
     },
     {
         title: "Safari trips",
         description: "Experience thrilling wildlife adventures with HowTo Travel's safari packages. Affordable bookings for national parks like the Masai Mara and jeeps, guides, and stays included. Expert planning, best rates, and hassle-free arrangements for an unforgettable, value-packed nature escape.",
-        image: "/ServicesImages/img9.png",
+        image: "/ServicesImages/img1.png",
     },
     {
         title: "Tour packages",
         description: "We offer curated tour packages for group, family, or couple trips. All-inclusive deals cover flights, hotels, transfers, sightseeing, and more at the lowest prices. Personalised options, seamless coordination, and stress-free planning turn your dream vacation into reality affordably and effortlessly.",
-        image: "/ServicesImages/img10.png",
+        image: "/ServicesImages/img4.png",
     },
 ];
 

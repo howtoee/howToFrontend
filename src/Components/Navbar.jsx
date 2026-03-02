@@ -258,7 +258,7 @@ const Navbar = () => {
               >
                 <div className="relative w-20 h-14 sm:w-24 sm:h-16 lg:w-28 lg:h-18 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                   <img
-                    src="/logo.png"
+                    src="/Howto logo-01.png"
                     alt="howTo Logo"
                     className="w-full h-full object-contain filter drop-shadow-sm"
                   />

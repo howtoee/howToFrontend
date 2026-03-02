@@ -4,5 +4,5 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/',  // 👈 ADD THIS LINE
+  // base: '/howToFrontend/',  // 👈 ADD THIS LINE
 })  
