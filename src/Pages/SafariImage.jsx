@@ -1,5 +1,5 @@
 import React from "react";
-
+import Wild from "../assets/Images/Wild.png"
 const SafariImage = () => {
   return (
     <div className="w-screen overflow-hidden">
@@ -14,7 +14,7 @@ const SafariImage = () => {
         "
       >
         <img
-          src="/Images/Wild.png"
+          src={Wild}
           alt="Wildlife Safari"
           className="
             w-full h-full object-cover

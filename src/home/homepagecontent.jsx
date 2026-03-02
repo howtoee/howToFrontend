@@ -1,15 +1,15 @@
-const innovationImageA = "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"; // Meeting/Innovation
-const innovationImageB = "https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg"; // Code/Tech
-const innovationImageC = "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"; // Brainstorming
-const innovationImageD = "https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg"; // Teamwork
-const innovationImageE = "https://images.pexels.com/photos/716276/pexels-photo-716276.jpeg"; // Networking
 
-const testimonialAvatar1 = "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg";
-const testimonialAvatar2 = "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg";
-const testimonialAvatar3 = "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg";
+import innovationImageA from "../assets/Cilents/pexels-photo-3183150.jpeg"
+import innovationImageB from "../assets/Cilents/img2.jpeg"
+import innovationImageC from "../assets/Cilents/img3.jpeg"
+import innovationImageD from "../assets/Cilents/img4.jpeg"
+import innovationImageE from "../assets/Cilents/img3.jpeg"
+import testimonialAvatar1 from "../assets/Cilents/cilent1.jpeg"
+import testimonialAvatar2 from "../assets/Cilents/cilent2.jpeg"
+import testimonialAvatar3 from "../assets/Cilents/cilent3.jpeg"
+import aboutImg1 from "../assets/Cilents/aboutImg1.jpeg"
+import aboutImg2 from "../assets/Cilents/aboutImg2.jpeg"
 
-const aboutImg1 = "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg";
-const aboutImg2 = "https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg";
 
 export const aboutData = {
   heading: "Redefining the way you travel",

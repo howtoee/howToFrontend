@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaUser, FaPhone, FaEnvelope, FaRegComment, FaClipboardList } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-
+import ContacImage from "../assets/Images/Contact.png"
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -55,7 +55,7 @@ const Contact = () => {
           initial={{ scale: 1.2 }}
           animate={{ scale: 1 }}
           transition={{ duration: 10, ease: "easeOut" }}
-          src="/Images/Contact.png"
+          src={ContacImage}
           alt="Contact Hero"
           className="absolute inset-0 w-full h-full object-cover object-bottom"
         />

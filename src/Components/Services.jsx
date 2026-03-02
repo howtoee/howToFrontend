@@ -13,66 +13,77 @@ import {
   SparklesIcon,            // packages
 } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
+import ServicesImage from "../assets/Images/Services.png"
+import FlightBooking from "../assets/ServicesImages/FlightBooking.png";
+import Visa from "../assets/ServicesImages/Visa.png";
+import BusBooking from "../assets/ServicesImages/BusBooking.png";
+import TrainBooking from "../assets/ServicesImages/TrainBooking.png";
+import AirportTransfer from "../assets/ServicesImages/AirportTransfer.png";
+import LocalTransfer from "../assets/ServicesImages/LocalTransfer.png";
+import Tourpackages from "../assets/ServicesImages/Tourpackages.jpg";
+import Safari from "../assets/ServicesImages/Safari.jpg";
+import HotelBooking from "../assets/ServicesImages/HotelBooking.jpg"
+import Travel from "../assets/ServicesImages/Travel.jpg"
 const services = [
   {
     title: "Flight Bookings",
     desc: "Secure the cheapest domestic and international flights with HowTo Travel. We compare real-time prices across airlines to offer unbeatable last-minute and advance deals. Easy online booking, flexible changes, and 24/7 support make your air travel simple, affordable, and stress-free, no hidden fees, just the lowest rates guaranteed.",
     icon: PaperAirplaneIcon,
-    image: "/ServicesImages/FlightBooking.png",
+    image: FlightBooking,
   },
   {
     title: "Hotel Bookings",
     desc: "FWe help you find the best hotel deals worldwide. From luxury resorts to budget stays, we guarantee the lowest prices with instant confirmation. Compare options easily, read real reviews, and book seamlessly. Enjoy comfortable, value-packed accommodations without overspending, your perfect stay starts here.",
     icon: BuildingOffice2Icon,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+    image: HotelBooking,
   },
   {
     title: "Visa Appointments",
     desc: "Get hassle-free visa assistance with us. We guide you through applications, document requirements, and appointment scheduling for popular destinations. Fast, accurate support ensures smooth processing and higher approval chances. Travel worry-free with expert help at the most affordable service rates available.",
     icon: IdentificationIcon,
-    image: "/ServicesImages/Visa.png",
+    image: Visa,
   },
   {
     title: "Travel Insurance",
     desc: "Protect your journey with affordable and comprehensive travel insurance at HowTo Travel. Coverage includes medical emergencies, trip cancellations, lost baggage, and delays. Quick online purchase, instant policy, and reliable claims support. Travel confidently knowing you're covered at the lowest premiums.",
     icon: ShieldCheckIcon,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    image: Travel,
   },
   {
     title: "Bus Bookings",
     desc: "Book comfortable, budget-friendly bus tickets across India with us. Select AC, sleeper, and luxury options with the cheapest fares and real-time availability. Simple booking process, secure payments, and timely rides, making intercity travel easy, affordable, and reliable every time.",
     icon: TruckIcon,
-    image: "/ServicesImages/BusBooking.png",
+    image: BusBooking,
   },
   {
     title: "Train Bookings",
     desc: "Reserve IRCTC and other train tickets effortlessly through HowTo Travel. Get the lowest confirmed fares, tatkal options, and seat availability checks. Fast booking, e-tickets, and helpful support for groups or last-minute plans. Enjoy smooth, cost-effective rail journeys without the usual hassle.",
     icon: ArrowPathRoundedSquareIcon,
-    image:  "/ServicesImages/TrainBooking.png",
+    image:  TrainBooking,
   },
   {
     title: "Airport Transfers",
     desc: "Arrive stress-free with reliable, low-cost airport transfers from HowTo Travel. Private cars, shuttles, or luxury options to/from any airport. Book in advance or last-minute at unbeatable prices with a meet-and-greet service. Safe, punctual rides ensure a smooth start or end to your trip.",
     icon: MapPinIcon,
-    image: "/ServicesImages/AirportTransfer.png",
+    image:AirportTransfer,
   },
   {
     title: "Local Transfers",
     desc: "Explore cities comfortably with affordable local transfers booked through HowTo Travel. From city rides to day trips, choose taxis, private cars, or shuttles at the cheapest rates. Easy booking, professional drivers, and on-time service, making local travel convenient, safe, and budget-friendly wherever you go..",
     icon: GlobeAsiaAustraliaIcon,
-    image: "/ServicesImages/LocalTransfer.png",
+    image: LocalTransfer,
   },
   {
     title: "Safari Trips",
     desc: "Experience thrilling wildlife adventures with HowTo Travel's safari packages. Affordable bookings for national parks like the Masai Mara and jeeps, guides, and stays included. Expert planning, best rates, and hassle-free arrangements for an unforgettable, value-packed nature escape.",
     icon: CameraIcon,
-    image: "https://images.unsplash.com/photo-1546182990-dffeafbe841d",
+    image:Safari,
   },
   {
     title: "Tour Packages",
     desc: "We offer curated tour packages at for group, family, or couple trips. All-inclusive deals cover flights, hotels, transfers, sightseeing, and more at the lowest prices. Personalised options, seamless coordination, and stress-free planning turn your dream vacation into reality affordably and effortlessly.",
     icon: SparklesIcon,
-    image: "/ServicesImages/Tourpackages.jpg",
+    image: Tourpackages,
   },
 ];
 
@@ -85,7 +96,7 @@ const Services = () => {
         {/* Full-width Hero */}
         <div className="relative w-full h-[30vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] overflow-hidden rounded-b-2xl sm:rounded-b-[2rem] lg:rounded-b-[3rem]">
           <img
-            src="/Images/Services.png"
+            src={ServicesImage}
             alt="Services"
             className="absolute inset-0 w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700 brightness-220"
           />

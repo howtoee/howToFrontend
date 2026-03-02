@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { GlobeAltIcon, ShieldCheckIcon, TicketIcon } from "@heroicons/react/24/outline";
 import Whychoose from "../Pages/Whychoose";
-
+import AboutUsImage from "../assets/Images/AboutUs.png"
 const AboutUs = () => {
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -20,7 +20,7 @@ const AboutUs = () => {
       <div className="relative w-full h-[30vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] overflow-hidden rounded-b-2xl sm:rounded-b-[2rem] lg:rounded-b-[3rem]">
         {/* Background Image */}
         <img
-          src="/Images/AboutUs.png"
+          src={AboutUsImage}
           alt="About Us"
           className="absolute inset-0 w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700"
         />

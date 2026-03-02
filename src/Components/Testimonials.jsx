@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { StarIcon } from '@heroicons/react/24/solid';
-
+import TestimonialsImage from "../assets/Images/Testimonials.jpg"
 const Testimonials = () => {
   const testimonials = [
     {
@@ -151,7 +151,7 @@ const Testimonials = () => {
       <section className="relative overflow-hidden text-white bg-gray-900">
         <div className="relative w-full h-[30vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] overflow-hidden rounded-b-2xl sm:rounded-b-[2rem] lg:rounded-b-[3rem]">
           <img
-            src="/Images/Testimonials.jpg"
+            src={TestimonialsImage}
             alt="Testimonials"
             className="absolute inset-0 w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700"
           />
