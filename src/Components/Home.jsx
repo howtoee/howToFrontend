@@ -6,13 +6,13 @@ import ServicesScrolling from "../Pages/ServicesScrolling";
 import Whychoose from "../Pages/Whychoose";
 import SafariImage from "../Pages/SafariImage";
 import FlipTestimonials from "../Pages/FlipTestimonials";
-
+import BannerImage from "../assets/Images/BannerImage12.png";
 const Home = () => {
   return (
     <div className="w-full">
    <section className="w-full relative">
   <img
-    src="/Images/BannerImage12.png"
+    src={BannerImage}
     alt="Banner"
     fetchPriority="high"
     decoding="async"
