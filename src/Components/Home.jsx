@@ -12,7 +12,7 @@ const Home = () => {
     <div className="w-full">
       <section className="w-full relative">
         <img
-          src="/Images/Banner.jpeg"
+          src="/Images/BannerImage12.png"
           alt="Banner"
           fetchPriority="high"
           decoding="async"
@@ -23,6 +23,7 @@ const Home = () => {
                      rounded-b-[2rem] sm:rounded-b-[3rem] md:rounded-b-[4rem] lg:rounded-b-[5rem]
                      shadow-[0_20px_50px_rgba(0,0,0,0.15)] filter brightness-105"
         />
+        hi
         {/* Subtle overlay gradient to make it look ultra-premium and separate it from the content */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10 rounded-b-[2rem] sm:rounded-b-[3rem] md:rounded-b-[4rem] lg:rounded-b-[5rem] pointer-events-none"></div>
       </section>
