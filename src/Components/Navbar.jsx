@@ -251,19 +251,21 @@ const Navbar = () => {
           <div className="flex justify-between items-center">
             {/* Logo - Column 1 */}
             <div className="flex-1 flex justify-start">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="flex-shrink-0 flex items-center cursor-pointer group"
-              >
-                <div className="relative w-20 h-14 sm:w-24 sm:h-16 lg:w-28 lg:h-18 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                  <img
-                    src={Logo }
-                    alt="howTo Logo"
-                    className="w-full h-full object-contain filter drop-shadow-sm"
-                  />
-                </div>
-              </motion.div>
+            <NavLink to="/">
+  <motion.div
+    initial={{ opacity: 0, x: -20 }}
+    animate={{ opacity: 1, x: 0 }}
+    className="flex-shrink-0 flex items-center cursor-pointer group"
+  >
+    <div className="relative w-20 h-14 sm:w-24 sm:h-16 lg:w-28 lg:h-18 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+      <img
+        src={Logo}
+        alt="howTo Logo"
+        className="w-full h-full object-contain filter drop-shadow-sm"
+      />
+    </div>
+  </motion.div>
+</NavLink>
             </div>
 
             {/* Desktop Navigation - Column 2 (Centered) */}

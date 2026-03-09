@@ -20,7 +20,7 @@ export const aboutData = {
   image1: aboutImg1,
   image2: aboutImg2,
 
-  buttonText: "Know us Better",
+  buttonText: "know us better",
   // Innovation Section images, explicitly using four distinct Pexels URLs
   innovationImages: [
     innovationImageA,
@@ -31,7 +31,7 @@ export const aboutData = {
   ],
   satisfiedClients: {
     count: 1800,
-    label: "Satisfied Clients",
+    label: "Happy Clients",
     // These are also Pexels URLs now to avoid local file dependency
     avatars: [testimonialAvatar1, testimonialAvatar2, testimonialAvatar3],
   },

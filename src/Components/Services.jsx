@@ -27,19 +27,19 @@ import Travel from "../assets/ServicesImages/Travel.jpg"
 const services = [
   {
     title: "Flight Bookings",
-    desc: "Secure the cheapest domestic and international flights with HowTo Travel. We compare real-time prices across airlines to offer unbeatable last-minute and advance deals. Easy online booking, flexible changes, and 24/7 support make your air travel simple, affordable, and stress-free, no hidden fees, just the lowest rates guaranteed.",
+    desc: "Secure the most affordable domestic and international flights with HowTo Travel. We compare real-time prices across airlines to offer unbeatable deals, even at the last-minute. Easy online booking, flexible changes, and 24/7 support make your air travel simple, affordable, and stress-free, no hidden fees, just the best rates guaranteed.",
     icon: PaperAirplaneIcon,
     image: FlightBooking,
   },
   {
     title: "Hotel Bookings",
-    desc: "FWe help you find the best hotel deals worldwide. From luxury resorts to budget stays, we guarantee the lowest prices with instant confirmation. Compare options easily, read real reviews, and book seamlessly. Enjoy comfortable, value-packed accommodations without overspending, your perfect stay starts here.",
+    desc: "We help you find the best hotel deals worldwide. From luxury resorts to budget stays, we guarantee the lowest prices with instant confirmation. Compare options easily, read real reviews, and book seamlessly. Enjoy comfortable, value-packed accommodations without overspending. Your perfect stay starts here.",
     icon: BuildingOffice2Icon,
     image: HotelBooking,
   },
   {
     title: "Visa Appointments",
-    desc: "Get hassle-free visa assistance with us. We guide you through applications, document requirements, and appointment scheduling for popular destinations. Fast, accurate support ensures smooth processing and higher approval chances. Travel worry-free with expert help at the most affordable service rates available.",
+    desc: "We provide hassle-free visa assistance. We guide you through applications, document requirements, and appointment scheduling for popular destinations. Fast, accurate support ensures smooth processing and higher chances of approval. Travel worry-free with expert help at the most affordable rates.",
     icon: IdentificationIcon,
     image: Visa,
   },
@@ -63,13 +63,13 @@ const services = [
   },
   {
     title: "Airport Transfers",
-    desc: "Arrive stress-free with reliable, low-cost airport transfers from HowTo Travel. Private cars, shuttles, or luxury options to/from any airport. Book in advance or last-minute at unbeatable prices with a meet-and-greet service. Safe, punctual rides ensure a smooth start or end to your trip.",
+    desc: "Arrive stress-free with reliable, low-cost airport transfers from HowTo Travel. Private cars, shuttles, or luxury options to/from any airport. Book in advance or last-minute at unbeatable prices with a meet-and-greet service. Safe, punctual rides ensure a smooth start and end to your trip.",
     icon: MapPinIcon,
     image:AirportTransfer,
   },
   {
     title: "Local Transfers",
-    desc: "Explore cities comfortably with affordable local transfers booked through HowTo Travel. From city rides to day trips, choose taxis, private cars, or shuttles at the cheapest rates. Easy booking, professional drivers, and on-time service, making local travel convenient, safe, and budget-friendly wherever you go..",
+    desc: "Explore cities comfortably with affordable local transfers booked through HowTo Travel. From city rides to day trips, choose taxis, private cars, or shuttles at cost-effective rates. Easy booking, professional drivers, and on-time service, making local travel convenient, safe, and budget-friendly wherever you go..",
     icon: GlobeAsiaAustraliaIcon,
     image: LocalTransfer,
   },
@@ -81,7 +81,7 @@ const services = [
   },
   {
     title: "Tour Packages",
-    desc: "We offer curated tour packages at for group, family, or couple trips. All-inclusive deals cover flights, hotels, transfers, sightseeing, and more at the lowest prices. Personalised options, seamless coordination, and stress-free planning turn your dream vacation into reality affordably and effortlessly.",
+    desc: "We offer curated tour packages  for group, family, or couple trips. All-inclusive deals  flights, hotels, transfers, sightseeing, and more  pocket-friendly prices. Personalised options, seamless coordination, and stress-free planning turn your dream vacation into reality affordably and effortlessly.",
     icon: SparklesIcon,
     image: Tourpackages,
   },
@@ -165,7 +165,7 @@ const Services = () => {
                       </h3>
                     </div>
 
-                    <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-300 leading-relaxed text-justify">
                       {service.desc}
                     </p>
 

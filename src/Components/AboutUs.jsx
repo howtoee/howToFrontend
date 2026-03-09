@@ -67,7 +67,7 @@ const AboutUs = () => {
           {
             icon: TicketIcon,
             title: "What we do?",
-            text: "Flights, hotels, visas, insurance, trains, buses, transfers, safaris, and curated tour packages — all in one easy place.",
+            text: "Flights, hotels, visas, insurance, trains, buses, transfers, safaris, and curated packages, all under one roof.",
           },
         ].map((card, i) => (
           <motion.div

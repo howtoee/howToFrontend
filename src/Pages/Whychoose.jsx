@@ -19,11 +19,11 @@ const Whychoose = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-gray-900"
+          className="text-3xl sm:text-4xl lg:text-4xl font-bold mb-4 text-gray-900"
         >
-          Why Us?
+      Your journey, upgraded! Smart travel starts here.
         </motion.h2>
-
+<br />
         <motion.p
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -31,10 +31,10 @@ const Whychoose = () => {
           viewport={{ once: true }}
           className="text-gray-600 text-base sm:text-lg md:text-xl"
         >
-          At HowTo Travel, we go beyond ordinary travel bookings, delivering the cheapest rates across all your needs while ensuring a reliable, hassle-free experience that major apps and websites simply can't match.
+          At HowTo Travel, we go beyond ordinary travel bookings, delivering the most affordable rates across all your needs while ensuring a reliable, hassle-free experience that major apps and websites simply can't match.
         </motion.p>
 
-<motion.ul
+<motion.div
   initial="hidden"
   whileInView="visible"
   viewport={{ once: true }}
@@ -49,20 +49,19 @@ const Whychoose = () => {
   className="mt-8 space-y-6 text-left"
 >
   {points.map((point, index) => (
-    <motion.li
+    <motion.p
       key={index}
       variants={{
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0 }
       }}
       transition={{ duration: 0.7 }}
-      className="flex items-start gap-3 text-gray-700 leading-relaxed"
+      className="text-gray-700 leading-relaxed text-lg"
     >
-      <FaCheckCircle className="text-blue-600 mt-1 text-lg flex-shrink-0" />
-      <span>{point}</span>
-    </motion.li>
+      {point}
+    </motion.p>
   ))}
-</motion.ul>
+</motion.div>
 
       </div>
     </div>
