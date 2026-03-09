@@ -40,10 +40,10 @@ const SafariImage = () => {
               text-white font-bold tracking-wider
               animate-fadeInUp
               text-xl
-              sm:text-2xl
-              md:text-3xl
-              lg:text-4xl
-              xl:text-5xl
+              sm:text-4xl
+              md:text-5xl
+              lg:text-7xl
+              xl:text-8xl
             "
           >
             Wildlife Safari

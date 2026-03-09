@@ -64,6 +64,7 @@ const Contact = () => {
 
         {/* Text Area */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+          <br />
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -72,14 +73,14 @@ const Contact = () => {
           >
             Get in Touch
           </motion.h1>
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-indigo-100 text-sm sm:text-base md:text-lg max-w-2xl font-medium drop-shadow-md pb-12 sm:pb-0"
           >
             We're here to help you plan your next perfect trip. Reach out below and our experts will get back to you immediately!
-          </motion.p>
+          </motion.p> */}
         </div>
       </section>
 

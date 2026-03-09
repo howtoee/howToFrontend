@@ -153,7 +153,7 @@ const Testimonials = () => {
           <img
             src={TestimonialsImage}
             alt="Testimonials"
-            className="absolute inset-0 w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700"
+            className="absolute inset-0 w-full h-full object-top scale-105 hover:scale-110 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
