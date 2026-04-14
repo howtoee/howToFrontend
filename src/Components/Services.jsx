@@ -38,7 +38,7 @@ const services = [
     image: HotelBooking,
   },
   {
-    title: "Visa Appointments",
+    title: "Visa Services",
     desc: "We provide hassle-free visa assistance. We guide you through applications, document requirements, and appointment scheduling for popular destinations. Fast, accurate support ensures smooth processing and higher chances of approval. Travel worry-free with expert help at the most affordable rates.",
     icon: IdentificationIcon,
     image: Visa,

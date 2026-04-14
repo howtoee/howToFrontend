@@ -160,7 +160,7 @@ const Contact = () => {
                   <option value="" disabled className="text-gray-400">Select Service...</option>
                   <option value="Flight bookings" className="text-gray-800">Flight bookings</option>
                   <option value="Hotel bookings" className="text-gray-800">Hotel bookings</option>
-                  <option value="Visa appointments" className="text-gray-800">Visa appointments</option>
+                  <option value="Visa Services" className="text-gray-800">Visa Services</option>
                   <option value="Travel insurance" className="text-gray-800">Travel insurance</option>
                   <option value="Bus bookings" className="text-gray-800">Bus bookings</option>
                   <option value="Train bookings" className="text-gray-800">Train bookings</option>

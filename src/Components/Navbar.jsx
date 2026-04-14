@@ -96,7 +96,7 @@ const navLinks = [
     dropdown: [
       { name: "Flight Booking", path: "/services/flights", icon: Plane },
       { name: "Hotels", path: "/services/hotels", icon: Hotel },
-      { name: "Visa Appointments", path: "/services/visa", icon: Briefcase },
+      { name: "Visa Services", path: "/services/visa", icon: Briefcase },
       {
         name: "More",
         path: "/services",

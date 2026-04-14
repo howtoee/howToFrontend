@@ -1,6 +1,7 @@
 // src/Components/Footer.jsx
 import React from "react";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -27,7 +28,7 @@ const Footer = () => {
               <FaFacebookF className="text-indigo-200 group-hover:text-white transition-colors" />
             </a>
             <a href="#" className="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-blue-500 border border-white/10 hover:border-blue-400 transition-all duration-300 hover:-translate-y-1 shadow-lg group">
-              <FaTwitter className="text-indigo-200 group-hover:text-white transition-colors" />
+              <FaXTwitter className="text-indigo-200 group-hover:text-white transition-colors" />
             </a>
             <a href="#" className="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-pink-500 border border-white/10 hover:border-pink-400 transition-all duration-300 hover:-translate-y-1 shadow-lg group">
               <FaInstagram className="text-indigo-200 group-hover:text-white transition-colors" />
@@ -60,7 +61,7 @@ const Footer = () => {
           <ul className="space-y-3 font-light text-indigo-200/80 text-sm">
             <li><Link to="/services/flights" className="hover:text-white hover:translate-x-1 block transition-all duration-300">Flight bookings</Link></li>
             <li><Link to="/services/hotels" className="hover:text-white hover:translate-x-1 block transition-all duration-300">Hotel bookings</Link></li>
-            <li><Link to="/services/visa" className="hover:text-white hover:translate-x-1 block transition-all duration-300">Visa appointments</Link></li>
+            <li><Link to="/services/visa" className="hover:text-white hover:translate-x-1 block transition-all duration-300">Visa Services</Link></li>
             <li><Link to="/services/insurance" className="hover:text-white hover:translate-x-1 block transition-all duration-300">Travel insurance</Link></li>
             <li><Link to="/services/bus" className="hover:text-white hover:translate-x-1 block transition-all duration-300">Bus & Train bookings</Link></li>
             <li><Link to="/services/airport-transfer" className="hover:text-white hover:translate-x-1 block transition-all duration-300">Airport & Local transfers</Link></li>
@@ -102,11 +103,11 @@ const Footer = () => {
 
       <div className="mt-8 px-6 text-center text-indigo-300/60 font-light text-sm relative z-10 flex flex-col md:flex-row justify-center items-center gap-2">
         <span>&copy; {new Date().getFullYear()} HowTo Travel. All rights reserved.</span>
-        <span className="hidden md:inline">|</span>
-        <span className="flex gap-4">
+        {/* <span className="hidden md:inline">|</span> */}
+        {/* <span className="flex gap-4">
           <Link to="#" className="hover:text-white transition-colors">Privacy Policy</Link>
           <Link to="#" className="hover:text-white transition-colors">Terms of Service</Link>
-        </span>
+        </span> */}
       </div>
     </footer>
   );

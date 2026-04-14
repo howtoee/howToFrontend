@@ -15,7 +15,7 @@ export const aboutData = {
   heading: "Redefining the way you travel",
 //   subHeading: "Your Gateway To Global Scientific Exchange",
   paragraphs: [
-    "Our travel hub, your ultimate pitstop for all travel needs. We specialise in seamless flight and hotel bookings, visa appointments, travel insurance, bus and train reservations, airport and local transfers, thrilling safari trips, and curated tour packages. Committed to affordability, we provide the lowest rates compared to any website or app, ensuring every journey is effortless, budget-friendly, and memorable.",
+    "Our travel hub, your ultimate pitstop for all travel needs. We specialise in seamless flight and hotel bookings, visa services, travel insurance, bus and train reservations, airport and local transfers, thrilling safari trips, and curated tour packages. Committed to affordability, we provide the lowest rates compared to any website or app, ensuring every journey is effortless, budget-friendly, and memorable.",
   ],
   image1: aboutImg1,
   image2: aboutImg2,

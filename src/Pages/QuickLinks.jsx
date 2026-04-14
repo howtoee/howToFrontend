@@ -8,7 +8,7 @@ const links = [
     id: 'whatsapp',
     icon: FaWhatsapp,
     label: 'WhatsApp',
-    link: 'https://wa.me/919014263831',
+    link: 'https://wa.me/1234567890',
     isExternal: true,
     target: '_blank',
     color: '#25D366' // whatsapp green
@@ -17,7 +17,7 @@ const links = [
     id: 'mobile',
     icon: FaPhoneAlt,
     label: 'Call Us',
-    link: 'tel:+919014263831',
+    link: 'tel:+1234567890',
     isExternal: true,
     color: '#34d399' // emerald-400
   },
@@ -66,7 +66,7 @@ const QuickLinks = () => {
       {/* Outer absolute container takes 0x0 size and holds the sticky context without pushing page layout */}
       <div className="absolute top-0 right-0 w-0 h-full z-[9999] pointer-events-none">
         {/* Inner sticky container actually sticks smoothly while scrolling */}
-        <div className="sticky top-[420px] right-0 flex flex-col space-y-3 pointer-events-none float-right mr-0">
+        <div className="sticky top-[180px] right-0 flex flex-col space-y-3 pointer-events-none float-right mr-0">
           {links.map(({ id, icon: Icon, label, link, isExternal, target, color }) => {
             const isActive = hoveredId === id;
 

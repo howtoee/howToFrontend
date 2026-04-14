@@ -23,7 +23,7 @@ const services = [
         image: Img2,
     },
     {
-        title: "Visa appointments",
+        title: "Visa services",
         description: "Get hassle-free visa assistance with us. We guide you through applications, document requirements, and appointment scheduling for popular destinations. Fast, accurate support ensures smooth processing and higher approval chances. Travel worry-free with expert help at the most affordable service rates available.",
         image:Img3
     },

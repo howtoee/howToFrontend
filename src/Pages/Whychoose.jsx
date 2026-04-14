@@ -7,7 +7,7 @@ const points = [
 
   "At HowTo Travels, we understand that every trip carries a story. The excitement of a long-awaited vacation, the nervous anticipation of a business meeting abroad, and the joy of a family getaway. Our team ensures that from your first booking to your safe return, everything flows effortlessly.",
 
-  "From seamless flight and hotel reservations to visa appointments, travel insurance, train and bus tickets, airport transfers, safari adventures, and curated tour packages, we handle every detail so you can focus on the experience itself while enjoying reliable service and affordable fares."
+  "From seamless flight and hotel reservations to visa services, travel insurance, train and bus tickets, airport transfers, safari adventures, and curated tour packages, we handle every detail so you can focus on the experience itself while enjoying reliable service and affordable fares."
 ];
 const Whychoose = () => {
   return (
