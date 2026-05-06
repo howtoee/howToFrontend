@@ -24,7 +24,7 @@ import {
   MoreHorizontal,
   ChevronRight,
 } from "lucide-react";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logo.webp";
 const customStyles = `
   .google-translate-container {
     display: flex;

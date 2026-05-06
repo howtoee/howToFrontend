@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { StarIcon } from '@heroicons/react/24/solid';
-import TestimonialsImage from "../assets/Images/Testimonials.jpg"
+import TestimonialsImage from "../assets/Images/Testimonials.webp"
 const Testimonials = () => {
   const testimonials = [
     {
@@ -119,8 +119,8 @@ const Testimonials = () => {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.12,
-        delayChildren: 0.1,
+        staggerChildren: 0.08,
+        delayChildren: 0.05,
       },
     },
   };
@@ -153,6 +153,9 @@ const Testimonials = () => {
           <img
             src={TestimonialsImage}
             alt="Testimonials"
+            fetchPriority="high"
+            decoding="async"
+            loading="eager"
             className="absolute inset-0 w-full h-full object-top scale-105 hover:scale-110 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-black/40" />

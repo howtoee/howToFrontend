@@ -1,25 +1,27 @@
 import React from "react";
-import Wild from "../assets/Images/Wild.png";
+import Wild from "../assets/Images/WildSafari.webp";
 
 const SafariImage = () => {
   return (
-    <div className="w-screen overflow-hidden">
+    <div className="w-full overflow-hidden">
       <a href="https://wildwonders.in" target="_blank" rel="noopener noreferrer">
         <div
           className="
             relative w-full group
             h-[45vh]
-            sm:h-[55vh]
-            md:h-[60vh]
-            lg:h-[70vh]
-            xl:h-[80vh]
+            sm:h-[60vh]
+            md:h-[70vh]
+            lg:h-[80vh]
+            xl:h-[90vh]
           "
         >
           <img
             src={Wild}
             alt="Wildlife Safari"
+            loading="lazy"
+            decoding="async"
             className="
-              w-full h-full object-cover
+              w-full h-full object-cover object-center
               transition-transform duration-700 ease-out
               group-hover:scale-110
             "

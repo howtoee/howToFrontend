@@ -1,14 +1,14 @@
 
-import innovationImageA from "../assets/Cilents/pexels-photo-3183150.jpeg"
-import innovationImageB from "../assets/Cilents/img2.jpeg"
-import innovationImageC from "../assets/Cilents/img3.jpeg"
-import innovationImageD from "../assets/Cilents/img4.jpeg"
-import innovationImageE from "../assets/Cilents/img3.jpeg"
-import testimonialAvatar1 from "../assets/Cilents/cilent1.jpeg"
-import testimonialAvatar2 from "../assets/Cilents/cilent2.jpeg"
-import testimonialAvatar3 from "../assets/Cilents/cilent3.jpeg"
-import aboutImg1 from "../assets/Cilents/aboutImg1.jpeg"
-import aboutImg2 from "../assets/Cilents/aboutImg2.jpeg"
+import innovationImageA from "../assets/Cilents/pexels-photo-3183150.webp"
+import innovationImageB from "../assets/Cilents/img2.webp"
+import innovationImageC from "../assets/Cilents/img3.webp"
+import innovationImageD from "../assets/Cilents/img4.webp"
+import innovationImageE from "../assets/Cilents/img3.webp"
+import testimonialAvatar1 from "../assets/Cilents/cilent1.webp"
+import testimonialAvatar2 from "../assets/Cilents/cilent2.webp"
+import testimonialAvatar3 from "../assets/Cilents/cilent3.webp"
+import aboutImg1 from "../assets/Cilents/aboutImg1.webp"
+import aboutImg2 from "../assets/Cilents/aboutImg2.webp"
 
 
 export const aboutData = {

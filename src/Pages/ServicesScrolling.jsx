@@ -1,190 +1,86 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import Img1 from "../assets/ServicesImages/img1.png";
-import Img2 from "../assets/ServicesImages/img2.png";
-import Img3 from "../assets/ServicesImages/img3.png";
-import Img4 from "../assets/ServicesImages/img4.png";
-import Img5 from "../assets/ServicesImages/img5.png";
-import Img7 from "../assets/ServicesImages/img7.png";
-import Img8 from "../assets/ServicesImages/img8.png";
-import Img9 from "../assets/ServicesImages/img9.png";
-import AirportTransfer from "../assets/ServicesImages/AirportTransfer.png";
-import LocalTransfer from "../assets/ServicesImages/LocalTransfer.png";
-// Conference data with correct image paths based on your folder structure
+
+// ✅ All WebP — these were 9–25MB PNGs each, now tiny
+import Img1  from "../assets/ServicesImages/img1.webp";
+import Img2  from "../assets/ServicesImages/img2.webp";
+import Img3  from "../assets/ServicesImages/img3.webp";
+import Img4  from "../assets/ServicesImages/img4.webp";
+import Img5  from "../assets/ServicesImages/img5.webp";
+import Img7  from "../assets/ServicesImages/img7.webp";
+import Img8  from "../assets/ServicesImages/img8.webp";
+import Img9  from "../assets/ServicesImages/img9.webp";
+import AirportTransfer from "../assets/ServicesImages/AirportTransfer.webp";
+import LocalTransfer   from "../assets/ServicesImages/LocalTransfer.webp";
+
 const services = [
-    {
-        title: "Flight bookings",
-        description: "Secure the cheapest domestic and international flights with HowTo Travel. We compare real-time prices across airlines to offer unbeatable last-minute and advance deals. Easy online booking, flexible changes, and 24/7 support make your air travel simple, affordable, and stress-free, no hidden fees, just the lowest rates guaranteed.",
-        image:Img8  // Path from public directory
-    },
-    {
-        title: "Hotel bookings",
-        description: "We help you find the best hotel deals worldwide. From luxury resorts to budget stays, we guarantee the lowest prices with instant confirmation. Compare options easily, read real reviews, and book seamlessly. Enjoy comfortable, value-packed accommodations without overspending, your perfect stay starts here.",
-        image: Img2,
-    },
-    {
-        title: "Visa services",
-        description: "Get hassle-free visa assistance with us. We guide you through applications, document requirements, and appointment scheduling for popular destinations. Fast, accurate support ensures smooth processing and higher approval chances. Travel worry-free with expert help at the most affordable service rates available.",
-        image:Img3
-    },
-    {
-        title: "Travel insurance",
-        description: "Protect your journey with affordable and comprehensive travel insurance at HowTo Travel. Coverage includes medical emergencies, trip cancellations, lost baggage, and delays. Quick online purchase, instant policy, and reliable claims support. Travel confidently knowing you're covered at the lowest premiums.",
-        image: Img5,
-    },
-    {
-        title: "Bus bookings",
-        description: "Book comfortable, budget-friendly bus tickets across India with us. Select AC, sleeper, and luxury options with the cheapest fares and real-time availability. Simple booking process, secure payments, and timely rides, making intercity travel easy, affordable, and reliable every time.",
-        image: Img7,
-    },
-    {
-        title: "Train bookings",
-        description: "Reserve IRCTC and other train tickets effortlessly through HowTo Travel. Get the lowest confirmed fares, tatkal options, and seat availability checks. Fast booking, e-tickets, and helpful support for groups or last-minute plans. Enjoy smooth, cost-effective rail journeys without the usual hassle.",
-        image: Img9,
-    },
-    {
-        title: "Airport transfers",
-        description: "Arrive stress-free with reliable, low-cost airport transfers from HowTo Travel. Private cars, shuttles, or luxury options to/from any airport. Book in advance or last-minute at unbeatable prices with a meet-and-greet service. Safe, punctual rides ensure a smooth start or end to your trip.",
-        image: AirportTransfer,
-    },
-    {
-        title: "Local transfers",
-        description: "Explore cities comfortably with affordable local transfers booked through HowTo Travel. From city rides to day trips, choose taxis, private cars, or shuttles at the cheapest rates. Easy booking, professional drivers, and on-time service, making local travel convenient, safe, and budget-friendly wherever you go.",
-        image:  LocalTransfer,
-    },
-    {
-        title: "Safari trips",
-        description: "Experience thrilling wildlife adventures with HowTo Travel's safari packages. Affordable bookings for national parks like the Masai Mara and jeeps, guides, and stays included. Expert planning, best rates, and hassle-free arrangements for an unforgettable, value-packed nature escape.",
-        image: Img1,
-    },
-    {
-        title: "Tour packages",
-        description: "We offer curated tour packages for group, family, or couple trips. All-inclusive deals cover flights, hotels, transfers, sightseeing, and more at the lowest prices. Personalised options, seamless coordination, and stress-free planning turn your dream vacation into reality affordably and effortlessly.",
-        image: Img4,
-    },
+  { title: "Flight bookings",   description: "Secure the cheapest domestic and international flights with HowTo Travel. We compare real-time prices across airlines to offer unbeatable last-minute and advance deals. Easy online booking, flexible changes, and 24/7 support make your air travel simple, affordable, and stress-free, no hidden fees, just the lowest rates guaranteed.", image: Img8 },
+  { title: "Hotel bookings",    description: "We help you find the best hotel deals worldwide. From luxury resorts to budget stays, we guarantee the lowest prices with instant confirmation. Compare options easily, read real reviews, and book seamlessly. Enjoy comfortable, value-packed accommodations without overspending, your perfect stay starts here.", image: Img2 },
+  { title: "Visa services",     description: "Get hassle-free visa assistance with us. We guide you through applications, document requirements, and appointment scheduling for popular destinations. Fast, accurate support ensures smooth processing and higher approval chances. Travel worry-free with expert help at the most affordable service rates available.", image: Img3 },
+  { title: "Travel insurance",  description: "Protect your journey with affordable and comprehensive travel insurance at HowTo Travel. Coverage includes medical emergencies, trip cancellations, lost baggage, and delays. Quick online purchase, instant policy, and reliable claims support. Travel confidently knowing you're covered at the lowest premiums.", image: Img5 },
+  { title: "Bus bookings",      description: "Book comfortable, budget-friendly bus tickets across India with us. Select AC, sleeper, and luxury options with the cheapest fares and real-time availability. Simple booking process, secure payments, and timely rides, making intercity travel easy, affordable, and reliable every time.", image: Img7 },
+  { title: "Train bookings",    description: "Reserve IRCTC and other train tickets effortlessly through HowTo Travel. Get the lowest confirmed fares, tatkal options, and seat availability checks. Fast booking, e-tickets, and helpful support for groups or last-minute plans. Enjoy smooth, cost-effective rail journeys without the usual hassle.", image: Img9 },
+  { title: "Airport transfers", description: "Arrive stress-free with reliable, low-cost airport transfers from HowTo Travel. Private cars, shuttles, or luxury options to/from any airport. Book in advance or last-minute at unbeatable prices with a meet-and-greet service. Safe, punctual rides ensure a smooth start or end to your trip.", image: AirportTransfer },
+  { title: "Local transfers",   description: "Explore cities comfortably with affordable local transfers booked through HowTo Travel. From city rides to day trips, choose taxis, private cars, or shuttles at the cheapest rates. Easy booking, professional drivers, and on-time service, making local travel convenient, safe, and budget-friendly wherever you go.", image: LocalTransfer },
+  { title: "Safari trips",      description: "Experience thrilling wildlife adventures with HowTo Travel's safari packages. Affordable bookings for national parks like the Masai Mara and jeeps, guides, and stays included. Expert planning, best rates, and hassle-free arrangements for an unforgettable, value-packed nature escape.", image: Img1 },
+  { title: "Tour packages",     description: "We offer curated tour packages for group, family, or couple trips. All-inclusive deals cover flights, hotels, transfers, sightseeing, and more at the lowest prices. Personalised options, seamless coordination, and stress-free planning turn your dream vacation into reality affordably and effortlessly.", image: Img4 },
 ];
 
 const ServicesScrolling = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    // Handle image error
-    const handleImageError = (e) => {
-        e.target.onerror = null;
-        e.target.src = "https://via.placeholder.com/400x300?text=Image+Not+Found";
-    };
+  const handleImageError = (e) => {
+    e.target.onerror = null;
+    e.target.src = "https://via.placeholder.com/400x300?text=Image+Not+Found";
+  };
 
-    return (
-        <div className="px-4 py-12 bg-gradient-to-r from-purple-700 to-blue-700">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-8">
-                Our Services
-            </h2>
+  return (
+    <div className="px-4 py-12 bg-gradient-to-r from-purple-700 to-blue-700">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-8">
+        Our Services
+      </h2>
 
-            {/* Marquee Wrapper */}
-            <div className="relative w-full flex overflow-hidden py-4">
-                {/* Track */}
-                <div className="flex w-max animate-marquee hover:pause">
-                    {/* First set of cards */}
-                    <div className="flex w-max">
-                        {services.map((service, index) => (
-                            <div
-                                key={`first-${index}`}
-                                className="bg-white rounded-2xl shadow-lg flex-shrink-0 mx-3 hover:scale-105 transition-transform duration-300 
-                          w-[280px] sm:w-[300px] md:w-[340px] lg:w-[380px]"
-                            >
-                                <img
-                                    src={service.image}
-                                    alt={service.title}
-                                    className="w-full h-44 sm:h-48 md:h-52 lg:h-56 object-cover rounded-t-2xl"
-                                    loading="lazy"
-                                    onError={handleImageError}
-                                />
-                                <div className="p-4">
-                                    <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 line-clamp-2 min-h-[3.5rem] text-blue-950">
-                                        {service.title}
-                                    </h3>
-                                    <p className="text-gray-600 mb-3 text-xs sm:text-sm md:text-base line-clamp-3 min-h-[4.5rem]">
-                                        {service.description}
-                                    </p>
-                                    <button
-                                        onClick={() => navigate("/services")}
-                                        className="text-blue-600 font-semibold hover:underline mt-1 inline-flex items-center text-xs sm:text-sm md:text-base"
-                                    >
-                                        Read More →
-                                    </button>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Second set of cards (Duplicate for infinite seamless loop) */}
-                    <div className="flex w-max">
-                        {services.map((service, index) => (
-                            <div
-                                key={`second-${index}`}
-                                className="bg-white rounded-2xl shadow-lg flex-shrink-0 mx-3 hover:scale-105 transition-transform duration-300 
-                          w-[280px] sm:w-[300px] md:w-[340px] lg:w-[380px]"
-                            >
-                                <img
-                                    src={service.image}
-                                    alt={service.title}
-                                    className="w-full h-44 sm:h-48 md:h-52 lg:h-56 object-cover rounded-t-2xl"
-                                    loading="lazy"
-                                    onError={handleImageError}
-                                />
-                                <div className="p-4">
-                                    <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 line-clamp-2 min-h-[3.5rem] text-blue-950">
-                                        {service.title}
-                                    </h3>
-                                    <p className="text-gray-600 mb-3 text-xs sm:text-sm md:text-base line-clamp-3 min-h-[4.5rem]">
-                                        {service.description}
-                                    </p>
-                                    <button
-                                        onClick={() => navigate("/services")}
-                                        className="text-blue-600 font-semibold hover:underline mt-1 inline-flex items-center text-xs sm:text-sm md:text-base"
-                                    >
-                                        Read More →
-                                    </button>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+      {/* Marquee Wrapper — GPU-only transform, no layout thrashing */}
+      <div className="relative w-full flex overflow-hidden py-4">
+        {/* Single animated track with doubled content for seamless loop */}
+        <div className="flex w-max animate-marquee">
+          {/* Render twice to create seamless infinite loop */}
+          {[0, 1].map((setKey) =>
+            services.map((service, index) => (
+              <div
+                key={`${setKey}-${index}`}
+                className="bg-white rounded-2xl shadow-lg flex-shrink-0 mx-3 hover:scale-105 transition-transform duration-300
+                           w-[280px] sm:w-[300px] md:w-[340px] lg:w-[380px]"
+              >
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-44 sm:h-48 md:h-52 lg:h-56 object-cover rounded-t-2xl"
+                  loading="lazy"
+                  decoding="async"
+                  onError={handleImageError}
+                />
+                <div className="p-4">
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 line-clamp-2 min-h-[3.5rem] text-blue-950">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-3 text-xs sm:text-sm md:text-base line-clamp-3 min-h-[4.5rem]">
+                    {service.description}
+                  </p>
+                  <button
+                    onClick={() => navigate("/services")}
+                    className="text-blue-600 font-semibold hover:underline mt-1 inline-flex items-center text-xs sm:text-sm md:text-base"
+                  >
+                    Read More →
+                  </button>
                 </div>
-            </div>
-
-            {/* Custom CSS for Marquee scrolling */}
-            <style>{`
-        /* The animation classes for the marquee loop */
-        .animate-marquee {
-          animation: marquee 35s linear infinite;
-        }
-
-        /* Hover state to pause the animation for reading/interacting */
-        .hover\\:pause:hover {
-          animation-play-state: paused;
-        }
-
-        /* Keyframes for the seamless loop */
-        @keyframes marquee {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            /* Since the track is precisely exactly 2x wide, shifting by -50% shifts exactly 1 set */
-            transform: translateX(-50%);
-          }
-        }
-
-        /* Prevent content shift during hover */
-        .hover\\:scale-105:hover {
-          transform: scale(1.05);
-          transition: transform 0.3s ease-in-out;
-          z-index: 10;
-        }
-      `}</style>
-
-
+              </div>
+            ))
+          )}
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default ServicesScrolling;

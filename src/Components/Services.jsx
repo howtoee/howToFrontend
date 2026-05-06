@@ -1,29 +1,32 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  PaperAirplaneIcon,        // flights
-  BuildingOffice2Icon,     // hotels
-  IdentificationIcon,      // visa
-  ShieldCheckIcon,         // insurance
-  TruckIcon,               // bus
-  ArrowPathRoundedSquareIcon, // train alternative
-  MapPinIcon,              // transfers
-  GlobeAsiaAustraliaIcon,  // tours / safari
-  CameraIcon,              // trips
-  SparklesIcon,            // packages
+  PaperAirplaneIcon,
+  BuildingOffice2Icon,
+  IdentificationIcon,
+  ShieldCheckIcon,
+  TruckIcon,
+  ArrowPathRoundedSquareIcon,
+  MapPinIcon,
+  GlobeAsiaAustraliaIcon,
+  CameraIcon,
+  SparklesIcon,
 } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
-import ServicesImage from "../assets/Images/Services.png"
-import FlightBooking from "../assets/ServicesImages/FlightBooking.png";
-import Visa from "../assets/ServicesImages/Visa.png";
-import BusBooking from "../assets/ServicesImages/BusBooking.png";
-import TrainBooking from "../assets/ServicesImages/TrainBooking.png";
-import AirportTransfer from "../assets/ServicesImages/AirportTransfer.png";
-import LocalTransfer from "../assets/ServicesImages/LocalTransfer.png";
-import Tourpackages from "../assets/ServicesImages/Tourpackages.jpg";
-import Safari from "../assets/ServicesImages/Safari.jpg";
-import HotelBooking from "../assets/ServicesImages/HotelBooking.jpg"
-import Travel from "../assets/ServicesImages/Travel.jpg"
+
+// ✅ All WebP — massive size reduction (some were 20-30MB PNGs!)
+import ServicesImage    from "../assets/Images/Services.webp";
+import FlightBooking    from "../assets/ServicesImages/FlightBooking.webp";
+import Visa             from "../assets/ServicesImages/Visa.webp";
+import BusBooking       from "../assets/ServicesImages/BusBooking.webp";
+import TrainBooking     from "../assets/ServicesImages/TrainBooking.webp";
+import AirportTransfer  from "../assets/ServicesImages/AirportTransfer.webp";
+import LocalTransfer    from "../assets/ServicesImages/LocalTransfer.webp";
+import Tourpackages     from "../assets/ServicesImages/Tourpackages.webp";
+import Safari           from "../assets/ServicesImages/Safari.webp";
+import HotelBooking     from "../assets/ServicesImages/HotelBooking.webp";
+import Travel           from "../assets/ServicesImages/Travel.webp";
+
 const services = [
   {
     title: "Flight Bookings",
@@ -59,17 +62,17 @@ const services = [
     title: "Train Bookings",
     desc: "Reserve IRCTC and other train tickets effortlessly through HowTo Travel. Get the lowest confirmed fares, tatkal options, and seat availability checks. Fast booking, e-tickets, and helpful support for groups or last-minute plans. Enjoy smooth, cost-effective rail journeys without the usual hassle.",
     icon: ArrowPathRoundedSquareIcon,
-    image:  TrainBooking,
+    image: TrainBooking,
   },
   {
     title: "Airport Transfers",
     desc: "Arrive stress-free with reliable, low-cost airport transfers from HowTo Travel. Private cars, shuttles, or luxury options to/from any airport. Book in advance or last-minute at unbeatable prices with a meet-and-greet service. Safe, punctual rides ensure a smooth start and end to your trip.",
     icon: MapPinIcon,
-    image:AirportTransfer,
+    image: AirportTransfer,
   },
   {
     title: "Local Transfers",
-    desc: "Explore cities comfortably with affordable local transfers booked through HowTo Travel. From city rides to day trips, choose taxis, private cars, or shuttles at cost-effective rates. Easy booking, professional drivers, and on-time service, making local travel convenient, safe, and budget-friendly wherever you go..",
+    desc: "Explore cities comfortably with affordable local transfers booked through HowTo Travel. From city rides to day trips, choose taxis, private cars, or shuttles at cost-effective rates. Easy booking, professional drivers, and on-time service, making local travel convenient, safe, and budget-friendly wherever you go.",
     icon: GlobeAsiaAustraliaIcon,
     image: LocalTransfer,
   },
@@ -77,11 +80,11 @@ const services = [
     title: "Safari Trips",
     desc: "Experience thrilling wildlife adventures with HowTo Travel's safari packages. Affordable bookings for national parks like the Masai Mara and jeeps, guides, and stays included. Expert planning, best rates, and hassle-free arrangements for an unforgettable, value-packed nature escape.",
     icon: CameraIcon,
-    image:Safari,
+    image: Safari,
   },
   {
     title: "Tour Packages",
-    desc: "We offer curated tour packages  for group, family, or couple trips. All-inclusive deals  flights, hotels, transfers, sightseeing, and more  pocket-friendly prices. Personalised options, seamless coordination, and stress-free planning turn your dream vacation into reality affordably and effortlessly.",
+    desc: "We offer curated tour packages for group, family, or couple trips. All-inclusive deals cover flights, hotels, transfers, sightseeing, and more at pocket-friendly prices. Personalised options, seamless coordination, and stress-free planning turn your dream vacation into reality affordably and effortlessly.",
     icon: SparklesIcon,
     image: Tourpackages,
   },
@@ -98,11 +101,14 @@ const Services = () => {
           <img
             src={ServicesImage}
             alt="Services"
+            fetchPriority="high"
+            decoding="async"
+            loading="eager"
             className="absolute inset-0 w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700 brightness-220"
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
-<br />
+        <br />
         {/* Gradient Background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.15),transparent_70%)]" />
 
@@ -116,26 +122,27 @@ const Services = () => {
               return (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, y: 50 }}
+                  initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
                   className={`grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-center ${
                     isReverse ? "lg:flex-row-reverse" : ""
                   }`}
                 >
                   {/* Image */}
                   <motion.div
-                    whileHover={{ scale: 1.04 }}
-                    transition={{ type: "spring", stiffness: 200 }}
+                    whileHover={{ scale: 1.03 }}
+                    transition={{ type: "spring", stiffness: 180, damping: 20 }}
                     className={`relative group rounded-3xl overflow-hidden shadow-xl ${
                       isReverse ? "md:order-2" : ""
                     }`}
                   >
-                   
                     <img
                       src={service.image}
                       alt={service.title}
+                      loading="lazy"
+                      decoding="async"
                       className="h-[200px] sm:h-[240px] md:h-[280px] lg:h-[320px] w-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-tr from-black/50 to-transparent" />
@@ -144,18 +151,19 @@ const Services = () => {
                   {/* Content Card */}
                   <motion.div
                     whileHover={{
-                      y: -6,
+                      y: -5,
                       boxShadow:
-                        "0 25px 60px -15px rgba(56,189,248,0.35), 0 10px 25px -10px rgba(99,102,241,0.3)",
+                        "0 25px 60px -15px rgba(56,189,248,0.25), 0 10px 25px -10px rgba(99,102,241,0.2)",
                     }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                    transition={{ type: "spring", stiffness: 260, damping: 22 }}
                     className={`relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 ${
                       isReverse ? "md:order-1" : ""
                     }`}
                   >
                     <div className="flex items-center gap-4 mb-4">
                       <motion.div
-                        whileHover={{ rotate: 8, scale: 1.15 }}
+                        whileHover={{ rotate: 8, scale: 1.12 }}
+                        transition={{ type: "spring", stiffness: 260 }}
                         className="p-3 rounded-xl bg-gradient-to-tr from-sky-400 to-indigo-500"
                       >
                         <Icon className="w-7 h-7 text-white" />
@@ -169,12 +177,12 @@ const Services = () => {
                       {service.desc}
                     </p>
 
-                 <button
-  onClick={() => navigate("/contact")}
-  className="mt-4 sm:mt-6 inline-flex items-center gap-2 rounded-full bg-sky-500/90 px-4 sm:px-6 py-2 text-xs sm:text-sm font-semibold text-white hover:bg-sky-400 transition-all cursor-pointer"
->
-  Explore Service
-</button>
+                    <button
+                      onClick={() => navigate("/contact")}
+                      className="mt-4 sm:mt-6 inline-flex items-center gap-2 rounded-full bg-sky-500/90 px-4 sm:px-6 py-2 text-xs sm:text-sm font-semibold text-white hover:bg-sky-400 transition-all cursor-pointer"
+                    >
+                      Explore Service
+                    </button>
                     <div className="absolute -inset-[1px] -z-10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-sky-500/40 via-indigo-500/40 to-pink-500/40 blur-xl" />
                   </motion.div>
                 </motion.div>

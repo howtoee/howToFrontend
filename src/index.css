@@ -2,26 +2,70 @@
 
 @import "tailwindcss";
 
+/* ============================================================
+   PERFORMANCE: GPU-accelerate the scroll container
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
-  -webkit-transform: translateZ(0);
+}
+
+html {
+  /* Native smooth scroll — no JS overhead */
+  scroll-behavior: smooth;
+  /* Hint browser to use GPU for compositing */
+  -webkit-overflow-scrolling: touch;
 }
 
 html,
 body {
-  scroll-behavior: smooth;
   overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
+  /* Prevent layout thrashing on scroll */
+  overscroll-behavior-y: none;
 }
 
-@keyframes gradient {
+/* ============================================================
+   IMAGES — prevent layout shift, lazy-load ready
+   ============================================================ */
+img {
+  /* Prevent content jumping while image loads */
+  content-visibility: auto;
+  /* Let GPU handle compositing */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  /* Smooth rendering */
+  image-rendering: auto;
+}
 
+/* Promote heavy animated elements to their own GPU layer */
+.gpu-layer {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* ============================================================
+   SCROLL PERFORMANCE — contain layout-heavy sections
+   ============================================================ */
+section {
+  /* Limit layout recalculation scope */
+  contain: layout style;
+}
+
+/* ============================================================
+   ANIMATIONS — keep off the main thread
+   ============================================================ */
+@keyframes gradient {
   0%,
   100% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
@@ -32,8 +76,27 @@ body {
   animation: gradient 12s ease infinite;
 }
 
+/* Scrolling marquee — GPU-only transform */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ============================================================
+   COMPONENTS
+   ============================================================ */
 .info-card {
   @apply bg-white/80 backdrop-blur-xl rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300;
+  contain: layout style paint;
 }
 
 .info-title {
@@ -54,4 +117,20 @@ body {
 
 .mobile-link {
   @apply block rounded-lg px-3 py-2 hover:bg-gray-100;
+}
+
+/* Swirl background animation — runs on compositor */
+@keyframes swirl-bg {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.7s ease-out both;
 }

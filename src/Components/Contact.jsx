@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaUser, FaPhone, FaEnvelope, FaRegComment, FaClipboardList } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import ContacImage from "../assets/Images/Contact.png"
+import ContacImage from "../assets/Images/Contact.webp"
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -57,6 +57,8 @@ const Contact = () => {
           transition={{ duration: 10, ease: "easeOut" }}
           src={ContacImage}
           alt="Contact Hero"
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover object-bottom"
         />
         {/* Animated gradient overlay for a premium look */}

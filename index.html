@@ -2,9 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="/vite.svg" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HowTo</title>
+    <meta name="description" content="HowTo Travel — your one-stop hub for flights, hotels, visa services, travel insurance, bus and train bookings, safari trips, and curated tour packages at the guaranteed lowest rates." />
+    <title>HowTo Travel</title>
+
+    <!-- ============================================================
+         PERFORMANCE: Preconnect to external origins used at runtime
+         ============================================================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://placehold.co" crossorigin />
+
+    <!-- ============================================================
+         PERFORMANCE: Hint the browser to fetch critical resources
+         early — before React even boots.
+         The banner is the LCP (Largest Contentful Paint) element.
+         ============================================================ -->
+    <link
+      rel="preload"
+      as="image"
+      href="/src/assets/Images/BannerImage12.webp"
+      fetchpriority="high"
+      type="image/webp"
+    />
+
+    <!-- Render-blocking CSS prevention: add dns-prefetch for external scripts -->
+    <link rel="dns-prefetch" href="https://translate.google.com" />
+    <link rel="dns-prefetch" href="https://translate.googleapis.com" />
   </head>
 
   <body>

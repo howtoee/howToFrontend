@@ -177,7 +177,9 @@ function InnovationSection() {
       style={{
         backgroundImage: 'linear-gradient(to right, #4A2868, #2E659A)',
         backgroundSize: 'cover',
-        backgroundAttachment: 'fixed',
+        /* NOTE: backgroundAttachment:'fixed' removed — it forces full GPU repaint on every scroll frame */
+        contain: 'layout style',
+        willChange: 'opacity',
       }}
       variants={containerVariants}
       initial="hidden"

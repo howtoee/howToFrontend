@@ -59,10 +59,10 @@ const OurAchievements = () => {
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-          <Counter end={2500} label="Flight Bookings" icon={Plane} />
-          <Counter end={850} label="Hotel Bookings" icon={Hotel} />
-          <Counter end={430} label=" Group Trips Completed" icon={Map} />
-          <Counter end={1800} label="Happy Customers" icon={Smile} />
+          <Counter end={15000} label="Flight Bookings" icon={Plane} />
+          <Counter end={4500} label="Hotel Bookings" icon={Hotel} />
+          <Counter end={500} label=" Group Trips Completed" icon={Map} />
+          <Counter end={12000} label="Happy Customers" icon={Smile} />
         </div>
       </div>
     </section>
