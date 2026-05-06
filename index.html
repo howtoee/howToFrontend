@@ -2,11 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="/howToFrontend/vite.svg" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HowTo</title>
-    <script type="module" crossorigin src="/howToFrontend/assets/index-DbR_D9Mc.js"></script>
-    <link rel="stylesheet" crossorigin href="/howToFrontend/assets/index-CISxXUmI.css">
+    <meta name="description" content="HowTo Travel — your one-stop hub for flights, hotels, visa services, travel insurance, bus and train bookings, safari trips, and curated tour packages at the guaranteed lowest rates." />
+    <title>HowTo Travel</title>
+
+    <!-- ============================================================
+         PERFORMANCE: Preconnect to external origins used at runtime
+         ============================================================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://placehold.co" crossorigin />
+
+    <!-- ============================================================
+         PERFORMANCE: Hint the browser to fetch critical resources
+         early — before React even boots.
+         The banner is the LCP (Largest Contentful Paint) element.
+         ============================================================ -->
+    <link
+      rel="preload"
+      as="image"
+      href="/howToFrontend/assets/BannerImage12-BF8kUgK9.webp"
+      fetchpriority="high"
+      type="image/webp"
+    />
+
+    <!-- Render-blocking CSS prevention: add dns-prefetch for external scripts -->
+    <link rel="dns-prefetch" href="https://translate.google.com" />
+    <link rel="dns-prefetch" href="https://translate.googleapis.com" />
+    <script type="module" crossorigin src="/howToFrontend/assets/index-BAc2cXn0.js"></script>
+    <link rel="modulepreload" crossorigin href="/howToFrontend/assets/router-Cm_r7u3d.js">
+    <link rel="modulepreload" crossorigin href="/howToFrontend/assets/framer-DspJqlio.js">
+    <link rel="modulepreload" crossorigin href="/howToFrontend/assets/gsap-DDlvirwQ.js">
+    <link rel="stylesheet" crossorigin href="/howToFrontend/assets/index-DkUq7Qld.css">
   </head>
 
   <body>
