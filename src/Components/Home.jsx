@@ -4,7 +4,7 @@ import InnovationSection from "../Pages/InnovationSection";
 import ServicesScrolling from "../Pages/ServicesScrolling";
 import SafariImage from "../Pages/SafariImage";
 import FlipTestimonials from "../Pages/FlipTestimonials";
-import BannerImage from "../assets/Images/BannerImage12.webp";
+import BannerImage from "../assets/Images/Banner.png";
 
 const Home = () => {
   return (

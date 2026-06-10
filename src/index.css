@@ -1,7 +1,7 @@
 /* src/index.css */
 
 @import "tailwindcss";
-
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 /* ============================================================
    PERFORMANCE: GPU-accelerate the scroll container
    ============================================================ */
@@ -95,7 +95,7 @@ section {
    COMPONENTS
    ============================================================ */
 .info-card {
-  @apply bg-white/80 backdrop-blur-xl rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300;
+  @apply bg-blue-100 backdrop-blur-xl rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300;
   contain: layout style paint;
 }
 

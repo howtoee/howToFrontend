@@ -11,6 +11,11 @@ import {
   GlobeAsiaAustraliaIcon,
   CameraIcon,
   SparklesIcon,
+  CpuChipIcon,
+  HomeModernIcon,
+  WrenchScrewdriverIcon,
+  UserGroupIcon,
+  ChartPieIcon,
 } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 
@@ -26,6 +31,12 @@ import Tourpackages     from "../assets/ServicesImages/Tourpackages.webp";
 import Safari           from "../assets/ServicesImages/Safari.webp";
 import HotelBooking     from "../assets/ServicesImages/HotelBooking.webp";
 import Travel           from "../assets/ServicesImages/Travel.webp";
+import TechAI           from "../assets/ServicesImages/img1.webp";
+import PhotographyImg   from "../assets/ServicesImages/img2.webp";
+import TravelRealEstate from "../assets/ServicesImages/img3.webp";
+import DesignConstruction from "../assets/ServicesImages/img4.webp";
+import Freelance        from "../assets/ServicesImages/img5.webp";
+import CoOwnership      from "../assets/ServicesImages/img6.webp";
 
 const services = [
   {
@@ -87,6 +98,42 @@ const services = [
     desc: "We offer curated tour packages for group, family, or couple trips. All-inclusive deals cover flights, hotels, transfers, sightseeing, and more at pocket-friendly prices. Personalised options, seamless coordination, and stress-free planning turn your dream vacation into reality affordably and effortlessly.",
     icon: SparklesIcon,
     image: Tourpackages,
+  },
+  {
+    title: "Technology & AI Services",
+    desc: "Empower your business with cutting-edge Technology & AI solutions. We deliver advanced software, scalable architectures, and intelligent AI models that drive innovation, optimize operations, and give you a competitive edge in the digital landscape.",
+    icon: CpuChipIcon,
+    image: TechAI,
+  },
+  {
+    title: "Photography & Creative Services",
+    desc: "Capture unforgettable moments and elevate your brand with our Photography & Creative Services. From stunning portraits and event coverage to engaging visual content and graphic design, we turn your unique vision into captivating reality.",
+    icon: CameraIcon,
+    image: PhotographyImg,
+  },
+  {
+    title: "Travel & Real Estate Services",
+    desc: "Seamlessly navigate your journeys and property investments with our comprehensive Travel & Real Estate Services. We offer expert guidance on premium travel packages, visa assistance, and lucrative real estate opportunities tailored to your goals.",
+    icon: HomeModernIcon,
+    image: TravelRealEstate,
+  },
+  {
+    title: "Design & Construction Services",
+    desc: "Transform your spaces with our professional Design & Construction Services. Whether it's architectural planning, interior design, or complete build-outs, we deliver high-quality, sustainable solutions that bring your dream structures to life.",
+    icon: WrenchScrewdriverIcon,
+    image: DesignConstruction,
+  },
+  {
+    title: "Freelance & Gig Economy",
+    desc: "Tap into top-tier talent or find your next professional opportunity through our Freelance & Gig Economy platform. We connect skilled freelancers with businesses needing flexible, specialized services for projects of any scale.",
+    icon: UserGroupIcon,
+    image: Freelance,
+  },
+  {
+    title: "Co-Ownership Investment Program",
+    desc: "Maximize your portfolio with our Co-Ownership Investment Program. Access high-value assets and real estate ventures through secure, fractional ownership, making robust investments more accessible, diversified, and profitable.",
+    icon: ChartPieIcon,
+    image: CoOwnership,
   },
 ];
 

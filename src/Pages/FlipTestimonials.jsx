@@ -112,11 +112,14 @@ const FlipTestimonials = () => {
                 </div>
               </div>
 
-              <div className="relative">
-                <p className="text-base sm:text-lg md:text-xl text-gray-800 font-semibold leading-loose italic relative z-10">
-                  "{active.quote}"
-                </p>
-              </div>
+           <div className="relative">
+  <p
+    className="text-xl sm:text-2xl md:text-3xl text-gray-800 leading-relaxed relative z-10"
+    style={{ fontFamily: "'Great Vibes', cursive" }}
+  >
+    ❝ {active.quote} ❞
+  </p>
+</div>
             </motion.div>
           </AnimatePresence>
         </div>

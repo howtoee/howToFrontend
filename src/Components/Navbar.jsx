@@ -23,6 +23,12 @@ import {
   Map,
   MoreHorizontal,
   ChevronRight,
+  Cpu,
+  Camera,
+  Building,
+  PenTool,
+  Users,
+  PieChart,
 } from "lucide-react";
 import Logo from "../assets/logo.webp";
 const customStyles = `
@@ -93,38 +99,46 @@ const navLinks = [
     name: "Services",
     path: "/services",
     icon: Briefcase,
-    dropdown: [
-      { name: "Flight Booking", path: "/services/flights", icon: Plane },
-      { name: "Hotels", path: "/services/hotels", icon: Hotel },
-      { name: "Visa Services", path: "/services/visa", icon: Briefcase },
+  dropdown: [
+  { name: "Flight Booking", path: "/services/flights", icon: Plane },
+  { name: "Hotels", path: "/services/hotels", icon: Hotel },
+  { name: "Visa Services", path: "/services/visa", icon: Briefcase },
+  { name: "Technology & AI Services", path: "/services/technology", icon: Cpu },
+  { name: "Photography & Creative Services", path: "/services/photography", icon: Camera },
+
+  {
+    name: "More",
+    path: "/services",
+    icon: MoreHorizontal,
+    isNested: true,
+    submenu: [
       {
-        name: "More",
-        path: "/services",
-        icon: MoreHorizontal,
-        isNested: true,
-        submenu: [
-          {
-            name: "Travel Insurance",
-            path: "/services/insurance",
-            icon: Shield,
-          },
-          { name: "Bus Bookings", path: "/services/bus", icon: Bus },
-          { name: "Train Bookings", path: "/services/train", icon: Train },
-          {
-            name: "Airport Transfers",
-            path: "/services/airport-transfer",
-            icon: Car,
-          },
-          {
-            name: "Local Transfers",
-            path: "/services/local-transfer",
-            icon: MapPin,
-          },
-          { name: "Safari Trips", path: "/services/safari", icon: Compass },
-          { name: "Tour Packages", path: "/services/tours", icon: Map },
-        ],
+        name: "Travel Insurance",
+        path: "/services/insurance",
+        icon: Shield,
       },
+      { name: "Bus Bookings", path: "/services/bus", icon: Bus },
+      { name: "Train Bookings", path: "/services/train", icon: Train },
+      {
+        name: "Airport Transfers",
+        path: "/services/airport-transfer",
+        icon: Car,
+      },
+      {
+        name: "Local Transfers",
+        path: "/services/local-transfer",
+        icon: MapPin,
+      },
+      { name: "Safari Trips", path: "/services/safari", icon: Compass },
+      { name: "Tour Packages", path: "/services/tours", icon: Map },
+
+      { name: "Travel & Real Estate Services", path: "/services/travel-real-estate", icon: Building },
+      { name: "Design & Construction Services", path: "/services/design-construction", icon: PenTool },
+      { name: "Freelance & Gig Economy", path: "/services/freelance", icon: Users },
+      { name: "Co-Ownership Investment Program", path: "/services/co-ownership", icon: PieChart },
     ],
+  },
+]
   },
   { name: "Testimonials", path: "/testimonials", icon: MessageSquare },
   { name: "Contact Us", path: "/contact", icon: Phone },

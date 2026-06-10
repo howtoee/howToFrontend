@@ -66,6 +66,12 @@ const App = () => {
                 <Route path="/services/local-transfer" element={<Services />} />
                 <Route path="/services/safari" element={<Services />} />
                 <Route path="/services/tours" element={<Services />} />
+                <Route path="/services/technology" element={<Services />} />
+                <Route path="/services/photography" element={<Services />} />
+                <Route path="/services/travel-real-estate" element={<Services />} />
+                <Route path="/services/design-construction" element={<Services />} />
+                <Route path="/services/freelance" element={<Services />} />
+                <Route path="/services/co-ownership" element={<Services />} />
                 <Route path="/testimonials" element={<Testimonials />} />
                 <Route path="/contact" element={<ContactPage />} />
               </Routes>

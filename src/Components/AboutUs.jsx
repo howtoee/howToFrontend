@@ -79,7 +79,7 @@ const AboutUs = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="info-card p-6 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col items-start"
+           className="info-card p-6 rounded-xl bg-blue-400 backdrop-blur-md border border-white/10 shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col items-start"
           >
             <card.icon className="w-10 h-10 sm:w-12 sm:h-12 text-purple-400 mb-4" />
             <h3 className="info-title text-xl sm:text-2xl font-semibold mb-3 text-white">

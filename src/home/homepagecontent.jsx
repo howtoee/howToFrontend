@@ -30,7 +30,7 @@ export const aboutData = {
     innovationImageE,
   ],
   satisfiedClients: {
-    count: 1800,
+    count:12000 ,
     label: "Happy Clients",
     // These are also Pexels URLs now to avoid local file dependency
     avatars: [testimonialAvatar1, testimonialAvatar2, testimonialAvatar3],

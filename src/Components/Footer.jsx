@@ -3,7 +3,7 @@ import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-
+import Logo from "../assets/logo.webp";
 const Footer = () => {
   return (
     <footer className="bg-indigo-950 text-white pt-16 pb-8 border-t-[6px] border-purple-600 relative overflow-hidden">
@@ -18,7 +18,7 @@ const Footer = () => {
         {/* Logo & About */}
         <div className="flex flex-col">
           <h2 className="text-3xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
-            HowTo Travel
+          <img src={Logo}></img>
           </h2>
           <p className="text-indigo-200/80 text-sm leading-relaxed mb-6 font-light">
             Your one-stop solution for flight bookings, hotels, visa assistance, travel insurance, and more. Affordable, reliable, and stress-free travel at your fingertips.
